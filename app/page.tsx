@@ -71,7 +71,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export default function ProtestTokenHomepage() {
   const [copied, setCopied] = useState(false)
-  const contractAddress = "0x1234...5678"
+  const contractAddress = "archway1kshsjvrxqw8h65ngy7szdw94ex6pdc82rgv39l75w54sdgk0ax9qlmwzpq"
+  const trim = "archway1ks...qlmwzpq"
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(contractAddress)
@@ -174,16 +175,21 @@ export default function ProtestTokenHomepage() {
           </div>
 
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-12 py-6 text-xl font-bold rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center">
+            <a
+              href="https://embeddables.testnet.andromedaprotocol.io/constantine-3/PRTExchange"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-12 py-6 text-xl font-bold rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center"
+            >
               <Rocket className="mr-3 h-6 w-6" />
               IGNITE REVOLUTION
-            </button>
+            </a>
             
           </div>
 
           <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-gray-900/80 to-black/80 rounded-2xl p-6 max-w-lg mx-auto backdrop-blur-sm border border-red-500/20">
-            <span className="text-gray-400 font-semibold">Contract:</span>
-            <code className="text-red-400 font-mono text-lg">{contractAddress}</code>
+            <span className="text-gray-400 font-semibold">CW20 ADDRESS:</span>
+            <code className="text-red-400 font-mono text-lg">{trim}</code>
             <button
               onClick={copyToClipboard}
               className="text-red-400 hover:text-red-300 hover:bg-red-500/10 p-2 rounded transition-colors"
@@ -194,96 +200,9 @@ export default function ProtestTokenHomepage() {
         </div>
       </section>
 
-      {/* Live Stats Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-red-900/5 via-transparent to-orange-900/5">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-gradient-to-br from-red-900/20 to-transparent border border-red-500/30 backdrop-blur-sm hover:border-red-400/50 transition-all duration-300 rounded-lg p-6 text-center">
-              <Users className="h-8 w-8 text-red-500 mx-auto mb-3" />
-              <div className="text-3xl font-black text-red-400 mb-2">15.2M</div>
-              <div className="text-gray-400 font-semibold">Rebels United</div>
-              <div className="flex items-center justify-center mt-2 text-green-400">
-                <ArrowUp className="h-4 w-4 mr-1" />
-                <span className="text-sm">+12.5%</span>
-              </div>
-            </div>
+      
 
-            <div className="bg-gradient-to-br from-orange-900/20 to-transparent border border-orange-500/30 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300 rounded-lg p-6 text-center">
-              <DollarSign className="h-8 w-8 text-orange-500 mx-auto mb-3" />
-              <div className="text-3xl font-black text-orange-400 mb-2">$4.7M</div>
-              <div className="text-gray-400 font-semibold">Market Cap</div>
-              <div className="flex items-center justify-center mt-2 text-green-400">
-                <ArrowUp className="h-4 w-4 mr-1" />
-                <span className="text-sm">+28.3%</span>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-red-900/20 to-transparent border border-red-500/30 backdrop-blur-sm hover:border-red-400/50 transition-all duration-300 rounded-lg p-6 text-center">
-              <TrendingUp className="h-8 w-8 text-red-500 mx-auto mb-3" />
-              <div className="text-3xl font-black text-red-400 mb-2">847%</div>
-              <div className="text-gray-400 font-semibold">ATH Gains</div>
-              <div className="flex items-center justify-center mt-2 text-red-400">
-                <Sparkles className="h-4 w-4 mr-1" />
-                <span className="text-sm">All Time</span>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-orange-900/20 to-transparent border border-orange-500/30 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300 rounded-lg p-6 text-center">
-              <Activity className="h-8 w-8 text-orange-500 mx-auto mb-3" />
-              <div className="text-3xl font-black text-orange-400 mb-2">$2.1M</div>
-              <div className="text-gray-400 font-semibold">24h Volume</div>
-              <div className="flex items-center justify-center mt-2 text-green-400">
-                <ArrowUp className="h-4 w-4 mr-1" />
-                <span className="text-sm">+45.7%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trading Pairs Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-black mb-4 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-              LIVE TRADING
-            </h2>
-            <p className="text-xl text-gray-300">Real-time market data across all exchanges</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {tradingData.map((pair, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-red-500/20 backdrop-blur-sm hover:border-red-400/40 transition-all duration-300 rounded-lg p-6"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xl font-bold text-white">{pair.pair}</span>
-                  <span
-                    className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                      pair.change.startsWith("+")
-                        ? "bg-green-600/20 text-green-400 border border-green-500/30"
-                        : "bg-red-600/20 text-red-400 border border-red-500/30"
-                    }`}
-                  >
-                    {pair.change}
-                  </span>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Price:</span>
-                    <span className="text-red-400 font-bold">{pair.price}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Volume:</span>
-                    <span className="text-orange-400 font-bold">{pair.volume}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  
 
       {/* Charts Section */}
       <section id="charts" className="py-20 px-4 bg-gradient-to-br from-red-900/5 via-transparent to-orange-900/5">
@@ -588,10 +507,14 @@ export default function ProtestTokenHomepage() {
                 of finance.
               </p>
             </div>
-            <button className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-16 py-8 text-2xl font-black rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center mx-auto">
+            <button
+              onClick={() => window.location.href = "https://embeddables.testnet.andromedaprotocol.io/constantine-3/PRTExchange"}
+              className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-16 py-8 text-2xl font-black rounded-2xl shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center mx-auto"
+            >
               <Flame className="mr-4 h-8 w-8" />
               START YOUR REVOLUTION NOW
             </button>
+
           </div>
         </div>
       </section>
