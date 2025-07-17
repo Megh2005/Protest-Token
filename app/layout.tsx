@@ -5,8 +5,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
-        default: "Andromeda Embeddable",
-        template: "%s | Embeddable"
+        default: "VIBE Exchange",
+        template: "%s"
     },
 }
 
