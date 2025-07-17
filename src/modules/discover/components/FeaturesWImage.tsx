@@ -47,13 +47,13 @@ const FeaturesWImage: FC<FeaturesWImageProps> = (props) => {
                 p={2}
                 alignSelf={'flex-start'}
                 rounded={'md'}>
-                POWER EXCHANGE FEATURES
+                VIBE PARTY FEATURES
             </Text>
-            <Heading>Supercharge Your Wallet ⚡</Heading>
+            <Heading>Join the Ultimate Blockchain Party 🎉</Heading>
             <Text color={'gray.600'} fontSize={'lg'}>
-                <chakra.span fontWeight="bold" textDecoration="underline" color="yellow.400">POWER</chakra.span> is the energy you need to electrify your crypto journey!
+                <chakra.span fontWeight="bold" textDecoration="underline" color="yellow.400">VIBE</chakra.span> is pure chaos and good vibes packed into a token!
                 <br />
-                Buy, trade, and unlock new possibilities with the most dynamic coin in the market.
+                Dance, pump, and laugh all the way to the moon with the most fun coin on the blockchain.
             </Text>
             <Stack
                 spacing={4}
@@ -61,29 +61,29 @@ const FeaturesWImage: FC<FeaturesWImageProps> = (props) => {
                 <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
                 }>
                 <Feature
-                emojiIcon={'⚡'}
+                emojiIcon={'🎉'}
                 iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-                text={'Instant Energy Boost'}
+                text={'Pure Viral Potential'}
                 />
                 <Feature
-                emojiIcon={'💸'}
+                emojiIcon={'🕺'}
                 iconBg={useColorModeValue('blue.100', 'blue.900')}
-                text={'Seamless Transactions'}
+                text={'Non-Stop Fun Trading'}
                 />
                 <Feature
-                emojiIcon={'🔒'}
+                emojiIcon={'🌙'}
                 iconBg={useColorModeValue('green.100', 'green.900')}
-                text={'Secure & Reliable'}
+                text={'Moon-Bound Community'}
                 />
             </Stack>
             </Stack>
             <Flex>
             <Image
                 rounded={'md'}
-                alt={'power coin exchange'}
+                alt={'vibe coin party'}
                 aspectRatio={4 / 4}
                 src={
-                    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                    'https://res.cloudinary.com/djyk287ep/image/upload/v1752761402/ChatGPT_Image_Jul_17_2025_07_38_59_PM_aowmki.png'
                     }
                 objectFit={'cover'}
             />

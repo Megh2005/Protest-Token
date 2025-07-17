@@ -13,34 +13,34 @@ import Link from "next/link";
 
 const testimonials = [
   {
-    name: 'Max Voltage',
-    role: 'Crypto Enthusiast',
+    name: 'DJ Moonbeam',
+    role: 'Party Pioneer',
     content:
-      "Buying POWER was a game changer! ⚡ My portfolio is now supercharged and every transaction feels instant and secure. Highly recommend for anyone wanting to energize their assets!",
+      "VIBE is the ultimate party on the blockchain! 🎉 Every trade feels like dancing to the moon. This token brings pure chaos and good vibes to my portfolio!",
     avatar:
       'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=334&q=80',
   },
   {
-    name: 'Sparky Jane',
-    role: 'Digital Investor',
+    name: 'Groove Master',
+    role: 'Vibe Collector',
     content:
-      "POWER is the future! 🚀 Seamless experience, lightning-fast trades, and the community is absolutely electric. I feel unstoppable every time I buy POWER.",
+      "VIBE is pure viral potential! 🕺 Non-stop fun trading with a community that lives for the moment. I'm riding this wave all the way to the moon!",
     avatar:
       'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?auto=format&fit=crop&w=334&q=80',
   },
   {
-    name: 'Bolt King',
-    role: 'Tech Visionary',
+    name: 'Cosmic Dancer',
+    role: 'Blockchain Partier',
     content:
-      "The security and reliability of POWER exchange blew me away. 🔒 My coins are safe, and the interface is sleek and modern. This is how crypto should feel!",
+      "The VIBE community is insane! 🌙 Pure madness, good energy, and everyone's invited to this moon-bound party. Digital shades on, let's ride!",
     avatar:
       'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=334&q=80',
   },
   {
-    name: 'Electra Nova',
-    role: 'Early Adopter',
+    name: 'Neon Vibes',
+    role: 'Trend Rider',
     content:
-      "POWER lets me trade with confidence and style. 💸 The energy here is unmatched—join the revolution and power up your future!",
+      "VIBE broke the internet and my expectations! 🚀 No charts, no stress, just pure fun and viral potential. This is the future of meme coins!",
     avatar:
       'https://images.unsplash.com/photo-1606513542745-97629752a13b?auto=format&fit=crop&w=334&q=80',
   },
@@ -122,7 +122,7 @@ const Testimonials: FC<TestimonialsProps> = (props) => {
           fontFamily={'Work Sans'}
           fontWeight={'bold'}
           color={useColorModeValue('yellow.600', 'yellow.300')}>
-          Trusted by POWER Users
+          Trusted by VIBE Party People
         </chakra.h1>
         <chakra.h2
           margin={'auto'}
@@ -132,7 +132,7 @@ const Testimonials: FC<TestimonialsProps> = (props) => {
           color={useColorModeValue('gray.600', 'gray.400')}
           fontSize={20}
         >
-          See how <chakra.strong color={useColorModeValue('yellow.600', 'yellow.300')}>POWER</chakra.strong> is energizing lives and transforming crypto portfolios!
+          See how <chakra.strong color={useColorModeValue('yellow.600', 'yellow.300')}>VIBE</chakra.strong> is bringing pure chaos and good vibes to the blockchain!
         </chakra.h2>
       </Box>
       <SimpleGrid columns={{ base: 1, md: 2, xl: 4 }} spacing={10} mt={12} mb={12} mx={'auto'}>
@@ -140,34 +140,6 @@ const Testimonials: FC<TestimonialsProps> = (props) => {
           <TestimonialCard key={index} {...cardInfo} index={index} />
         ))}
       </SimpleGrid>
-      <Box>
-        <chakra.h1
-          py={5}
-          fontSize={40}
-          fontFamily={'Work Sans'}
-          fontWeight={'bold'}
-          color={useColorModeValue('yellow.500', 'yellow.300')}>
-          Ready to Power Up?
-        </chakra.h1>
-        <Link href={LINKS.cw20Token("AURA-Exchange")}>
-            <Button
-                colorScheme={'yellow'}
-                bg={'yellow.400'}
-                color="black"
-                px={8}
-                py={6}
-                fontSize="xl"
-                fontWeight={700}
-                borderRadius="full"
-                boxShadow="0 4px 24px rgba(255, 215, 0, 0.2)"
-                _hover={{
-                  bg: 'yellow.500',
-                  boxShadow: "0 6px 32px rgba(255, 215, 0, 0.3)",
-                }}>
-                Buy POWER Now
-            </Button>
-        </Link>
-      </Box>
     </Flex>
   );
 };

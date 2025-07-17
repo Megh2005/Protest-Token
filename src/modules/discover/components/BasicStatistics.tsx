@@ -36,18 +36,18 @@ function StatsCard(props: StatsCardProps) {
   )
 }
 
-interface BasicStatisticsProps {}
+interface BasicStatisticsProps { }
 const BasicStatistics: FC<BasicStatisticsProps> = (props) => {
-  const {} = props;
+  const { } = props;
   return (
     <Box maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
       <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'} color="yellow.500">
-        Power Up Your Portfolio!
+        Join the VIBE Revolution!
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-        <StatsCard title={'Total POWER'} stat={'5.0B POWER ⚡'} />
-        <StatsCard title={'Users'} stat={'25,000+ 🔥'} />
-        <StatsCard title={'Max Potential'} stat={'UNLIMITED 🚀'} />
+        <StatsCard title={'Total VIBE'} stat={'1B VIBE 🎉'} />
+        <StatsCard title={'Party People'} stat={'50,000+ 🕺'} />
+        <StatsCard title={'Fun Level'} stat={'MAXIMUM 🌙'} />
       </SimpleGrid>
     </Box>
   );
